@@ -1,16 +1,16 @@
 import pytest
 import substitution_cipher
 
-key = 'JIECHSDUGFRVAWNQTYBZOLKMPX'
+key = 'BCDEFGHIJKLMNOPQRSTUVWXYZA' # Caesar cipher ;-)
 
 testdata = [
-    ('A', 'J'),
-    ('B', 'I'),
-    ('Z', 'X'),
-    ('ABC', 'JIE'),
-    ('XYZ', 'MPX'),
-    ('AbCd', 'JiEc'),
-    ('XyZ', 'MpX'),
+    ('A', 'B'),
+    ('B', 'C'),
+    ('Z', 'A'),
+    ('ABC', 'BCD'),
+    ('XYZ', 'YZA'),
+    ('AbCd', 'BcDe'),
+    ('XyZ', 'YzA'),
 ]
 
 @pytest.mark.parametrize("message, expected", testdata)

@@ -35,7 +35,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="substitution cipher manager")
     parser.add_argument('action', choices=['encrypt', 'decrypt'])
     parser.add_argument('message', nargs='?', type=argparse.FileType('r'), default=sys.stdin)
-    parser.add_argument('--key', help='26 characters encrytion key', default='JIECHSDUGFRVAWNQTYBZOLKMPX')
+    parser.add_argument('--key', help='26 characters encrytion key', default='ZYXWVUTSRQPONMLKJIHGFEDCBA')
     args = parser.parse_args()
 
     with args.message as message:
